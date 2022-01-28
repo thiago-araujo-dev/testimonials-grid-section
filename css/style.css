@@ -1,0 +1,98 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: 2rem 1rem 2rem #dde1e0;
+}
+.card-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.card-profile img {
+    border-radius: 100%;
+    width: 32px;
+}
+.card-purple .card-profile img,
+.card-dark .card-profile img {
+    border: 2px solid rgb(150 121 197 / 90%);
+}
+.card-profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-content {
+    display: grid;
+    gap: 1rem;
+}
+.card .card-profile-name span, 
+.card .card-content p, .card .card-content h2 {
+    color:hsl(217, 19%, 35%);
+}
+.card-purple {
+    background: hsl(263, 55%, 52%) url('../images/bg-pattern-quotation.svg') no-repeat top 0 right 2rem;
+    color: white;
+}
+.card-purple .card-profile-name span, 
+.card-purple .card-content p {
+    color:rgb(211 199 231 / 90%);
+}
+.card-gray {background-color: hsl(217, 19%, 35%); color: white;}
+.card-gray .card-profile-name span,
+.card-gray .card-content p {
+    color: rgb(211 211 211 / 90%);
+}
+.card-dark {background-color: hsl(219, 29%, 14%); color: white;}
+.card-dark .card-profile-name span,
+.card-dark .card-content p {
+    color: rgb(211 211 211 / 90%);
+}
+.card-dark .card-content h2, .card-purple .card-content h2, .card-gray .card-content h2{
+    color: white;
+}
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    line-height: 2;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 768px) {
+    .card-list {
+        column-count: 3;
+        column-width: 13em;
+        column-gap: 2rem;
+        padding: 2rem;
+    }
+    .card {
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+    .card-profile {
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    .card-list {
+        column-count: 2;
+    }
+}
